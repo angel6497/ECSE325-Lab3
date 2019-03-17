@@ -1,0 +1,176 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/Zakaria/Desktop/ECSE325/Lab2/ECSE325_Lab2/VHDL
+Eg19_brd
+Z0 w1552509625
+Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z4 dC:/Users/Zakaria/Desktop/ECSE325/Lab3
+Z5 8C:/Users/Zakaria/Desktop/ECSE325/Lab3/g19_BRD.vhd
+Z6 FC:/Users/Zakaria/Desktop/ECSE325/Lab3/g19_BRD.vhd
+l0
+L5
+VSCn6>f[KRh766Pgk>`N3H2
+!s100 AfoKnACJj2Hz;k3UK9kc92
+Z7 OV;C;10.5b;63
+32
+Z8 !s110 1552509639
+!i10b 1
+Z9 !s108 1552509639.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Zakaria/Desktop/ECSE325/Lab3/g19_BRD.vhd|
+Z11 !s107 C:/Users/Zakaria/Desktop/ECSE325/Lab3/g19_BRD.vhd|
+!i113 1
+Z12 o-work work -2002 -explicit
+Z13 tExplicit 1 CvgOpt 0
+Alab3
+R1
+R2
+R3
+DEx4 work 7 g19_brd 0 22 SCn6>f[KRh766Pgk>`N3H2
+l15
+L11
+VQggSc]5QDG2fI>?076N=f3
+!s100 9G5MHj]B_iAIdKCQ@X>5?1
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Eg19_fir
+Z14 w1552509331
+R1
+R2
+R3
+R4
+Z15 8C:/Users/Zakaria/Desktop/ECSE325/Lab3/g19_FIR.vhd
+Z16 FC:/Users/Zakaria/Desktop/ECSE325/Lab3/g19_FIR.vhd
+l0
+L5
+VhBgSA2Ze7R?2G:IBLzS880
+!s100 EokMKF8<5XElYmBHK^i3=2
+R7
+32
+R8
+!i10b 1
+R9
+Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Zakaria/Desktop/ECSE325/Lab3/g19_FIR.vhd|
+Z18 !s107 C:/Users/Zakaria/Desktop/ECSE325/Lab3/g19_FIR.vhd|
+!i113 1
+R12
+R13
+Alab3
+R1
+R2
+R3
+DEx4 work 7 g19_fir 0 22 hBgSA2Ze7R?2G:IBLzS880
+l15
+L11
+VOEN2TAk^_YNh0IQa8?cI42
+!s100 mi]H>BH44lh7h0K[HzzM@0
+R7
+32
+R8
+!i10b 1
+R9
+R17
+R18
+!i113 1
+R12
+R13
+Eg19_fir2
+Z19 w1552506375
+R1
+R2
+R3
+R4
+Z20 8C:/Users/Zakaria/Desktop/ECSE325/Lab3/g19_FIR2.vhd
+Z21 FC:/Users/Zakaria/Desktop/ECSE325/Lab3/g19_FIR2.vhd
+l0
+L5
+V>6g@WLLMk=2hRjM@?`hF]0
+!s100 <GefOOlGfzjnAC2AeKa7A1
+R7
+32
+Z22 !s110 1552509640
+!i10b 1
+Z23 !s108 1552509640.000000
+Z24 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Zakaria/Desktop/ECSE325/Lab3/g19_FIR2.vhd|
+Z25 !s107 C:/Users/Zakaria/Desktop/ECSE325/Lab3/g19_FIR2.vhd|
+!i113 1
+R12
+R13
+Alab3
+R1
+R2
+R3
+Z26 DEx4 work 8 g19_fir2 0 22 >6g@WLLMk=2hRjM@?`hF]0
+l15
+L11
+Z27 VQL=j_5gf`N]J]=<??E;ga3
+Z28 !s100 4;aQz6^ECcNLiEFBZ<d:S1
+R7
+32
+R22
+!i10b 1
+R23
+R24
+R25
+!i113 1
+R12
+R13
+Eg19_fir_tb
+Z29 w1552509471
+Z30 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
+R1
+R2
+R3
+R4
+Z31 8C:/Users/Zakaria/Desktop/ECSE325/Lab3/g19_FIR_tb.vhd
+Z32 FC:/Users/Zakaria/Desktop/ECSE325/Lab3/g19_FIR_tb.vhd
+l0
+L7
+VWz@H5;8ad?jkcbJWgklF93
+!s100 CU@d_40`IeNC[o[Z5m2U_0
+R7
+32
+R8
+!i10b 1
+R9
+Z33 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Zakaria/Desktop/ECSE325/Lab3/g19_FIR_tb.vhd|
+Z34 !s107 C:/Users/Zakaria/Desktop/ECSE325/Lab3/g19_FIR_tb.vhd|
+!i113 1
+R12
+R13
+Atest
+R30
+R1
+R2
+R3
+DEx4 work 10 g19_fir_tb 0 22 Wz@H5;8ad?jkcbJWgklF93
+l26
+L10
+V:kd;OMXQ1aGCcD=bHI0eK1
+!s100 a;m[DGgl;:9VZ7f3Fa2MV3
+R7
+32
+R8
+!i10b 1
+R9
+R33
+R34
+!i113 1
+R12
+R13

@@ -1,0 +1,92 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use STD.textio.all;
+use ieee.std_logic_textio.all;
+
+entity g19_FIR_tb is
+end g19_FIR_tb;
+
+architecture test of g19_FIR_tb is
+	signal x_in :  std_logic_vector(9 downto 0);--w=10 F=7
+	signal y_in :  std_logic_vector(9 downto 0);--w=10 F=7
+	signal N_in: std_logic_vector( 9 downto 0);
+	signal clk_in, rst_in:  std_logic;
+	signal  ready_out:  std_logic;
+	signal mac_out:  std_logic_vector(21 downto 0);
+	component g19_MAC is
+	port (x : in std_logic_vector(9 downto 0);
+		y : in std_logic_vector(9 downto 0);
+		N:in std_logic_vector( 9 downto 0);
+		clk: in std_logic;
+		rst: in std_logic;
+		 ready: out std_logic;
+		mac: out std_logic_vector(21 downto 0));
+	end component g19_MAC;
+	file file_VECTORS_X :text;
+	file file_VECTORS_Y : text;
+	file file_RESULTS :text;
+	
+	constant clk_PERIOD : time := 100 ns;
+	
+	
+	
+	begin 
+		g19_MAC_INST : g19_MAC
+			port map (
+				x => x_in,
+				y => y_in,
+				N => N_in,
+				clk => clk_in,
+				rst => rst_in,
+				ready => ready_out,
+				mac=>mac_out
+				);
+		clk_generation: process
+		begin 
+			clk_in<='1';
+			wait for clk_PERIOD;
+			clk_in<='0';
+			wait for clk_PERIOD;
+		end process clk_generation;
+		feeding_instr :process 
+			variable v_lline1 :line;
+			variable v_lline2 :line;
+			variable v_Oline :line;
+			variable v_x_in:  std_logic_vector(9 downto 0);
+			variable v_y_in:  std_logic_vector(9 downto 0);
+			
+		begin 
+			N_in<="1111101000";
+ 			 rst_in<='1';
+			
+			x_in<=(others=>'0');
+			y_in<=(others=>'0');
+			wait until rising_edge(clk_in);
+			wait until rising_edge(clk_in);
+			rst_in<='0';
+		        file_open(file_VECTORS_X, "lab2-x-fixed-point.txt", read_mode);
+			file_open(file_VECTORS_Y, "lab2-y-fixed-point.txt", read_mode);
+			file_open(file_RESULTS, "lab2-out.txt", write_mode);
+			
+			while not endfile(file_VECTORS_X) loop
+				
+				readline(file_VECTORS_X, v_lline1);
+				read(v_lline1, v_x_in);
+				readline(file_VECTORS_Y, v_lline2);
+				read(v_lline2, v_y_in);
+
+				x_in<=v_x_in;
+				y_in<=v_y_in;
+				
+				wait until rising_edge(clk_in);
+			end loop;
+			wait until rising_edge(clk_in);
+			if ready_out='1' then 
+				write(v_Oline, mac_out);
+				writeline(file_RESULTS, v_Oline);
+				wait;
+			end if;
+			
+		end process feeding_instr;
+end test;			
