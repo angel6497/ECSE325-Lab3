@@ -1,0 +1,38 @@
+C:/Users/Zakaria/Desktop/ECSE325/Lab3/g19_FIR_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Zakaria/Desktop/ECSE325/Lab3/g19_FIR_tb.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_textio
+-- Compiling entity g19_FIR_tb
+-- Compiling architecture test of g19_FIR_tb
+
+} {} {}} C:/Users/Zakaria/Desktop/ECSE325/Lab3/g19_FIR2.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Zakaria/Desktop/ECSE325/Lab3/g19_FIR2.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity g19_FIR2
+-- Compiling architecture lab3 of g19_FIR2
+
+} {} {}} C:/Users/Zakaria/Desktop/ECSE325/Lab3/g19_BRD.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Zakaria/Desktop/ECSE325/Lab3/g19_BRD.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity g19_BRD
+-- Compiling architecture lab3 of g19_BRD
+
+} {} {}} C:/Users/Zakaria/Desktop/ECSE325/Lab3/g19_FIR.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Zakaria/Desktop/ECSE325/Lab3/g19_FIR.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity g19_FIR
+-- Compiling architecture lab3 of g19_FIR
+
+} {} {}}

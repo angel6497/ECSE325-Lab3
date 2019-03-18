@@ -1,0 +1,17 @@
+Analysis & Synthesis Status : Successful - Wed Mar 13 16:29:21 2019
+Quartus Prime Version : 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+Revision Name : g19_FIR
+Top-level Entity Name : g19_FIR
+Family : Cyclone V
+Logic utilization (in ALMs) : N/A
+Total registers : 417
+Total pins : 35
+Total virtual pins : 0
+Total block memory bits : 0
+Total DSP Blocks : 24
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 0
+Total DLLs : 0
