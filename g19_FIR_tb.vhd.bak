@@ -11,11 +11,11 @@ architecture test of g19_FIR_tb is
 	signal x_in :  std_logic_vector(15 downto 0);--w=10 F=7
 	signal clk_in, rst_in:  std_logic;
 	signal FIR_out:  std_logic_vector(16 downto 0);
-	component g19_FIR is
+	component g19_FIR2 is
 	port (x: in std_logic_vector (15 downto 0);
 			clk ,rst: in std_logic;
 			y: out std_logic_vector(16 downto 0));
-	end component g19_FIR;
+	end component g19_BRD;
 	file file_VECTORS_X :text;
 	file file_RESULTS :text;
 	
@@ -24,7 +24,7 @@ architecture test of g19_FIR_tb is
 	
 	
 	begin 
-		g19_FIR_INST : g19_FIR
+		g19_FIR_INST : g19_FIR2
 			port map (
 				x => x_in,
 				clk => clk_in,
@@ -53,8 +53,8 @@ architecture test of g19_FIR_tb is
 wait until rising_edge(clk_in);
 			--wait until falling_edge(clk_in);
 			rst_in<='0';
-		        file_open(file_VECTORS_X, "input.txt", read_mode);
-			file_open(file_RESULTS, "output.txt", write_mode);
+		        file_open(file_VECTORS_X, "input_bin_6_5.txt", read_mode);
+			file_open(file_RESULTS, "output_6_5.txt", write_mode);
 			
 			while not endfile(file_VECTORS_X) loop
 				
