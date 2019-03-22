@@ -8,14 +8,14 @@ entity g19_FIR_tb is
 end g19_FIR_tb;
 
 architecture test of g19_FIR_tb is
-	signal x_in :  std_logic_vector(15 downto 0);--w=10 F=7
+	signal x_in :  std_logic_vector(15 downto 0);
 	signal clk_in, rst_in:  std_logic;
 	signal FIR_out:  std_logic_vector(16 downto 0);
-	component g19_FIR2 is
+	component g19_FIR is -- declaring the componenent 
 	port (x: in std_logic_vector (15 downto 0);
 			clk ,rst: in std_logic;
 			y: out std_logic_vector(16 downto 0));
-	end component g19_FIR2;
+	end component g19_FIR;
 	file file_VECTORS_X :text;
 	file file_RESULTS :text;
 	
@@ -24,14 +24,14 @@ architecture test of g19_FIR_tb is
 	
 	
 	begin 
-		g19_FIR_INST : g19_FIR2
+		g19_FIR_INST : g19_FIR -- initializing the component
 			port map (
 				x => x_in,
 				clk => clk_in,
 				rst => rst_in,
 				y=>FIR_out
 				);
-		clk_generation: process
+		clk_generation: process-- creating the clock signal 
 		begin 
 			clk_in<='1';
 			wait for clk_PERIOD;
@@ -46,16 +46,17 @@ architecture test of g19_FIR_tb is
 			
 			
 		begin 
- 			rst_in<='1';
+ 			rst_in<='1'; -- reseting the regesisters
 			
 			x_in<=(others=>'0');
 			wait until rising_edge(clk_in);
-wait until rising_edge(clk_in);
-			--wait until falling_edge(clk_in);
-			rst_in<='0';
-		        file_open(file_VECTORS_X, "input_bin_6_5.txt", read_mode);
-			file_open(file_RESULTS, "output_6_5.txt", write_mode);
+			wait until rising_edge(clk_in);
 			
+			rst_in<='0';
+			-- opening the input and output files
+		        file_open(file_VECTORS_X, "input.txt", read_mode);
+			file_open(file_RESULTS, "output.txt", write_mode);
+			-- feeding the inputs to the filter and writting the output to the file
 			while not endfile(file_VECTORS_X) loop
 				
 				readline(file_VECTORS_X, v_lline1);

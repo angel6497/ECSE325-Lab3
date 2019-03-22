@@ -1,5 +1,5 @@
 Analysis & Synthesis report for g19_FIR
-Wed Mar 13 16:29:22 2019
+Fri Mar 22 11:02:35 2019
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -44,14 +44,14 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Mar 13 16:29:21 2019       ;
+; Analysis & Synthesis Status     ; Successful - Fri Mar 22 11:02:35 2019       ;
 ; Quartus Prime Version           ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                   ; g19_FIR                                     ;
-; Top-level Entity Name           ; g19_FIR                                     ;
+; Top-level Entity Name           ; g19_FIR_lp                                  ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 417                                         ;
-; Total pins                      ; 35                                          ;
+; Total registers                 ; 79                                          ;
+; Total pins                      ; 9                                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 24                                          ;
@@ -70,7 +70,7 @@ agreement for further details.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
-; Top-level entity name                                                           ; g19_FIR            ; g19_FIR            ;
+; Top-level entity name                                                           ; g19_FIR_lp         ; g19_FIR            ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
@@ -164,19 +164,17 @@ agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processor 3            ;   0.0%      ;
-;     Processor 4            ;   0.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                             ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                      ; Library ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------+---------+
-; g19_FIR.vhd                      ; yes             ; User VHDL File  ; C:/Users/Zakaria/Desktop/ECSE325/Lab3/g19_FIR.vhd ;         ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                             ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                      ; Library ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------+---------+
+; g19_FIR_lp.vhd                   ; yes             ; User VHDL File  ; C:/Users/Zakaria/Desktop/ECSE325/Lab3/ECSE325-Lab3/g19_FIR_lp.vhd ;         ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -184,7 +182,7 @@ agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 209       ;
+; Estimate of Logic utilization (ALMs needed) ; 40        ;
 ;                                             ;           ;
 ; Combinational ALUT usage for logic          ; 0         ;
 ;     -- 7 input functions                    ; 0         ;
@@ -193,16 +191,16 @@ agreement for further details.
 ;     -- 4 input functions                    ; 0         ;
 ;     -- <=3 input functions                  ; 0         ;
 ;                                             ;           ;
-; Dedicated logic registers                   ; 417       ;
+; Dedicated logic registers                   ; 79        ;
 ;                                             ;           ;
-; I/O pins                                    ; 35        ;
+; I/O pins                                    ; 9         ;
 ;                                             ;           ;
 ; Total DSP Blocks                            ; 24        ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 417       ;
-; Total fan-out                               ; 1726      ;
-; Average fan-out                             ; 3.38      ;
+; Maximum fan-out                             ; 79        ;
+; Total fan-out                               ; 348       ;
+; Average fan-out                             ; 2.88      ;
 +---------------------------------------------+-----------+
 
 
@@ -211,7 +209,7 @@ agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |g19_FIR                   ; 0 (0)               ; 417 (417)                 ; 0                 ; 24         ; 35   ; 0            ; |g19_FIR            ; g19_FIR     ; work         ;
+; |g19_FIR_lp                ; 0 (0)               ; 79 (79)                   ; 0                 ; 24         ; 9    ; 0            ; |g19_FIR_lp         ; g19_FIR_lp  ; work         ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -225,8 +223,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Sum of two 18x18                  ; 1           ;
 ; Total number of DSP blocks        ; 24          ;
 ;                                   ;             ;
-; Fixed Point Signed Multiplier     ; 12          ;
-; Fixed Point Mixed Sign Multiplier ; 13          ;
+; Fixed Point Signed Multiplier     ; 4           ;
+; Fixed Point Mixed Sign Multiplier ; 21          ;
 +-----------------------------------+-------------+
 
 
@@ -235,12 +233,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 417   ;
+; Total registers                              ; 79    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 400   ;
+; Number of registers using Asynchronous Clear ; 79    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 17    ;
+; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -250,11 +248,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------+---------------------------------+
 ; Type              ; Count                           ;
 +-------------------+---------------------------------+
-; arriav_ff         ; 417                             ;
-;     CLR           ; 400                             ;
-;     ENA           ; 17                              ;
+; arriav_ff         ; 79                              ;
+;     CLR           ; 79                              ;
 ; arriav_mac        ; 24                              ;
-; boundary_port     ; 35                              ;
+; boundary_port     ; 9                               ;
 ;                   ;                                 ;
 ; Max LUT depth     ; 0.00                            ;
 ; Average LUT depth ; 0.00                            ;
@@ -266,7 +263,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -276,31 +273,34 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Wed Mar 13 16:28:55 2019
+    Info: Processing started: Fri Mar 22 11:02:10 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off g19_FIR -c g19_FIR
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file g19_fir.vhd
-    Info (12022): Found design unit 1: g19_FIR-lab3 File: C:/Users/Zakaria/Desktop/ECSE325/Lab3/g19_FIR.vhd Line: 11
-    Info (12023): Found entity 1: g19_FIR File: C:/Users/Zakaria/Desktop/ECSE325/Lab3/g19_FIR.vhd Line: 5
+    Info (12022): Found design unit 1: g19_FIR-lab3 File: C:/Users/Zakaria/Desktop/ECSE325/Lab3/ECSE325-Lab3/g19_FIR.vhd Line: 11
+    Info (12023): Found entity 1: g19_FIR File: C:/Users/Zakaria/Desktop/ECSE325/Lab3/ECSE325-Lab3/g19_FIR.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file g19_brd.vhd
-    Info (12022): Found design unit 1: g19_BRD-lab3 File: C:/Users/Zakaria/Desktop/ECSE325/Lab3/g19_BRD.vhd Line: 11
-    Info (12023): Found entity 1: g19_BRD File: C:/Users/Zakaria/Desktop/ECSE325/Lab3/g19_BRD.vhd Line: 5
-Info (12127): Elaborating entity "g19_FIR" for the top level hierarchy
-Warning (10492): VHDL Process Statement warning at g19_FIR.vhd(47): signal "registers" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zakaria/Desktop/ECSE325/Lab3/g19_FIR.vhd Line: 47
-Warning (10492): VHDL Process Statement warning at g19_FIR.vhd(47): signal "coefficient" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zakaria/Desktop/ECSE325/Lab3/g19_FIR.vhd Line: 47
+    Info (12022): Found design unit 1: g19_BRD-lab3 File: C:/Users/Zakaria/Desktop/ECSE325/Lab3/ECSE325-Lab3/g19_BRD.vhd Line: 11
+    Info (12023): Found entity 1: g19_BRD File: C:/Users/Zakaria/Desktop/ECSE325/Lab3/ECSE325-Lab3/g19_BRD.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file g19_fir_lp.vhd
+    Info (12022): Found design unit 1: g19_FIR_lp-lab3 File: C:/Users/Zakaria/Desktop/ECSE325/Lab3/ECSE325-Lab3/g19_FIR_lp.vhd Line: 11
+    Info (12023): Found entity 1: g19_FIR_lp File: C:/Users/Zakaria/Desktop/ECSE325/Lab3/ECSE325-Lab3/g19_FIR_lp.vhd Line: 5
+Info (12127): Elaborating entity "g19_FIR_lp" for the top level hierarchy
+Warning (10492): VHDL Process Statement warning at g19_FIR_lp.vhd(47): signal "registers" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zakaria/Desktop/ECSE325/Lab3/ECSE325-Lab3/g19_FIR_lp.vhd Line: 47
+Warning (10492): VHDL Process Statement warning at g19_FIR_lp.vhd(47): signal "coefficient" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zakaria/Desktop/ECSE325/Lab3/ECSE325-Lab3/g19_FIR_lp.vhd Line: 47
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 476 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 18 input pins
-    Info (21059): Implemented 17 output pins
-    Info (21061): Implemented 417 logic cells
+Info (21057): Implemented 112 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 5 input pins
+    Info (21059): Implemented 4 output pins
+    Info (21061): Implemented 79 logic cells
     Info (21062): Implemented 24 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 4892 megabytes
-    Info: Processing ended: Wed Mar 13 16:29:22 2019
-    Info: Elapsed time: 00:00:27
-    Info: Total CPU time (on all processors): 00:01:00
+    Info: Peak virtual memory: 4885 megabytes
+    Info: Processing ended: Fri Mar 22 11:02:35 2019
+    Info: Elapsed time: 00:00:25
+    Info: Total CPU time (on all processors): 00:00:58
 
 
